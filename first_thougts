@@ -1,0 +1,43 @@
+Tankar:
+Bollen är innanför planen. 
+  Hitta planens kanter och hörn: linjedetetktion (ransac?)
+  Homografi för att se planen ovanifrån,
+  Sett ovanifrån kanske bildanalys är lättare,
+    Problem då bollen är i luften, då kan den se ut att vara utanför planen
+    Vi börjar med enkla fallet att bollen är på marken
+    Eventuellt gå vidare till då bollen är innanför planen (trots att den flyger). 
+    
+    
+    
+Detektion av bollen:
+  Hur många bilder per sekund?
+  Hur fort kan en boll röra sig?
+    Påverkas detta av perspektiv, alltså att den kan se ut att gå forta
+  Kolla fördelningen av intensitet i någon punkt på planen (ha något tröskelvärde för intressanta förändringar)
+    Detta ger apriori-distribution för någon pixel, 
+    Kolla på storlek hos förändringar (convolutions?)
+  Bollen kanske är där spelare är brevid varandra. 
+  
+Generell plan:
+  Hitta bollen med hjälp av radialt filter. 
+  Använd geometri för att beräkna bollens nästa position
+  leta främst efter bollen kring denna punkt.
+  
+Problem:
+  Bollen är nära en spelare
+    Spelaren är i vägen, bollen ses ej
+    Spelaren kan ändra på bollens rörelse. 
+  
+
+Vad har vi: 
+  Homografier för varje kamera till planet? 
+  Homografier för kamera till varandra (till mittkameran)?
+  Kameramatriser?
+  Det fanns radial distortion ifrån början, men sedan försvann denna med hjälp av någon transformation. Är det då okej att bara räkna på pinhole camera.
+  Hur var kamerorna placerade? Rectified?
+  
+Första steg:
+  CV:
+    Givet kameraposition i flera bilder, gör beräkningar på hur den rör sig. Jämför med prediktion.
+    Hur ser homografi ut för 
+  
