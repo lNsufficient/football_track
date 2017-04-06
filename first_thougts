@@ -40,4 +40,8 @@ Första steg:
   CV:
     Givet kameraposition i flera bilder, gör beräkningar på hur den rör sig. Jämför med prediktion.
     Hur ser homografi ut för 
+
+Vad vi har testat:
+  find waldo genom convolution - har bara testat med bilder ifrån samma bild. Kan funka, men vi borde testa från andra bilder i närheten.
+    det kanske behövs några exempelbollar från olika områden på planen. 
   
