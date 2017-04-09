@@ -2,7 +2,7 @@ new_run = 0;
 
 if new_run
     clear;
-    v = VideoReader('stitched.mkv');
+    v = VideoReader('stitched.m4v');
 end
 
 v.currentTime = 13; 
@@ -25,14 +25,14 @@ end
 ball_xy_time = [3128 142 13.04; 3041 152 13.84]
 makebw = 1
 
-v.CurrentTime = ball_xy_time(1, 3)
+v.CurrentTime = ball_xy_time(1, 3);
 im = readFrame(v);
 if makebw
     im = rgb2gray(im);
 end
-im = double(im)
-ball = [ball_xy_time(i,1) - ballsize, ball_xy_time(i,2)-ballsize, ballsize*2, ballsize*2]
-small_ball = imcrop(im, ball)
+im = double(im);
+ball = [ball_xy_time(i,1) - ballsize, ball_xy_time(i,2)-ballsize, ballsize*2, ballsize*2];
+small_ball = imcrop(im, ball);
 
 figure(2)
 imagesc(small_ball);

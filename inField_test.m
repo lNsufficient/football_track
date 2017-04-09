@@ -4,8 +4,8 @@ corners = [240 817;
            1910 78;
            3525 90;
            5130 818];
-plot(corners(:,1),corners(:,2),'o');
-v = VideoReader('stitched.m4v');
+
+v = VideoReader('stitched.mkv');
 v.currentTime = 13;
 img1 = rgb2gray(readFrame(v));
 %%
@@ -25,3 +25,5 @@ figure
 maskedImg = uint8(mask).*(img1);
 imagesc(maskedImg)
 save('mask','mask')
+hold on
+plot(corners(:,1),corners(:,2),'o');
