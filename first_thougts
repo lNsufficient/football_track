@@ -19,9 +19,15 @@ Detektion av bollen:
   Bollen kanske är där spelare är brevid varandra. 
   
 Generell plan:
-  Hitta bollen med hjälp av radialt filter. 
-  Använd geometri för att beräkna bollens nästa position
-  leta främst efter bollen kring denna punkt.
+  Hitta bollen med hjälp av radialt filter /faltning med boll (hitta waldo) - olika bollar får användas här
+    Använda olika bollar på olika ställen i planen?
+    Träna neuralt nätverk? 
+    Klassifiera dessa kandidater med hjälp av www.robots.ox.ac.uk/~vgg/practicals/cnn/
+  Alternativt träna ett nätverk för att hitta bollarna direkt, från den filtrerade bilden. 
+  
+  Förbättring av precision:
+    Använd geometri för att beräkna bollens nästa position (kan max flyttas 2.5 meter).
+    leta främst efter bollen kring denna punkt.
   
 Problem:
   Bollen är nära en spelare
@@ -29,12 +35,12 @@ Problem:
     Spelaren kan ändra på bollens rörelse. 
   
 
-Vad har vi: 
+Vad har vi?: 
   Homografier för varje kamera till planet? 
   Homografier för kamera till varandra (till mittkameran)?
   Kameramatriser?
   Det fanns radial distortion ifrån början, men sedan försvann denna med hjälp av någon transformation. Är det då okej att bara räkna på pinhole camera.
-  Hur var kamerorna placerade? Rectified?
+  Hur var kamerorna placerade? Samma kamera center?
   
 Första steg:
   CV:
