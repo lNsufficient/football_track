@@ -17,7 +17,8 @@ Detektion av bollen:
     Detta ger apriori-distribution för någon pixel, 
     Kolla på storlek hos förändringar (convolutions?)
   Bollen kanske är där spelare är brevid varandra. 
-  Kan man helt enkelt skapa ett neuralt nätverk som gör hela grejen? http://danielnouri.org/notes/2014/12/17/using-convolutional-neural-nets-to-detect-facial-keypoints-tutorial/
+  Kan man helt enkelt skapa ett neuralt nätverk som gör hela grejen? 
+    http://danielnouri.org/notes/2014/12/17/using-convolutional-neural-nets-to-detect-facial-keypoints-tutorial/
   
 Generell plan:
   Hitta bollen med hjälp av radialt filter /faltning med boll (hitta waldo) - olika bollar får användas här
