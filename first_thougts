@@ -54,15 +54,18 @@ Vad vi har gjort:
   find waldo genom convolution - har bara testat med bilder ifrån samma bild. Kan funka, men vi borde testa från andra bilder i närheten.
     det kanske behövs några exempelbollar från olika områden på planen. 
   Skapat en funktion som returnerar huruvida en punkt är på eller utanför planen.
+    Skapat en mask med hjälp av denna.
   Hittat homografi som ger planen sett ovanifrån 
     Denna kommer förmodligen inte användas för detektion av bollen, möjligtvis för att plotta bollens position efter att den hittats
       Detta kommer alltså inte hjälpa oss att hitta bollen, snarare att ge användaren information om bollen i efterhand. 
-      Möjligtvis kommer det användas för att räkna på möjlig position i nästa bild. 
+      Möjligtvis kommer det användas för att räkna på möjlig position i nästa bild. I så fall transformeras ENDAST bollens koordinater.
   Skapat ett testsett - i form av x, y-koordinater för ungefär 40 bilder, från de 60 första sekunderna i matchen.
     De rör sig på ganska många delar av planen.
-  Läst på lite om CNN
+  Läst på lite om CNN (matconvnet-1.0-beta24)
     Antingen använda för klassifiering av rimliga punkter
     Hitta 3d-koordinat direkt - vad händer i så fall om vi INTE shufflar bilderna då vi tränar datan, kommer den kanske få tidsinformation då?
+  Testat segmentera med kmeans square - inte så bra.
+  Testat att använda edge - kan vara användbart (bollen blev en sammanhängade "cirkel")
   Jobbat med idéer
     Avståndsbedömning med hjälp av kameramatris
   
