@@ -25,7 +25,8 @@ Generell plan:
     Använda olika bollar på olika ställen i planen?
     Träna neuralt nätverk? 
     Klassifiera dessa kandidater med hjälp av www.robots.ox.ac.uk/~vgg/practicals/cnn/
-  Alternativt träna ett nätverk för att hitta bollarna direkt, från den filtrerade bilden. 
+  Alternativt träna ett nätverk för att hitta bollarna direkt, från den filtrerade/maskade bilden. 
+  
   
   Förbättring av precision:
     Använd geometri för att beräkna bollens nästa position (kan max flyttas 2.5 meter).
@@ -49,7 +50,20 @@ Första steg:
     Givet kameraposition i flera bilder, gör beräkningar på hur den rör sig. Jämför med prediktion.
     Hur ser homografi ut för 
 
-Vad vi har testat:
+Vad vi har gjort:
   find waldo genom convolution - har bara testat med bilder ifrån samma bild. Kan funka, men vi borde testa från andra bilder i närheten.
     det kanske behövs några exempelbollar från olika områden på planen. 
+  Skapat en funktion som returnerar huruvida en punkt är på eller utanför planen.
+  Hittat homografi som ger planen sett ovanifrån 
+    Denna kommer förmodligen inte användas för detektion av bollen, möjligtvis för att plotta bollens position efter att den hittats
+      Detta kommer alltså inte hjälpa oss att hitta bollen, snarare att ge användaren information om bollen i efterhand. 
+      Möjligtvis kommer det användas för att räkna på möjlig position i nästa bild. 
+  Skapat ett testsett - i form av x, y-koordinater för ungefär 40 bilder, från de 60 första sekunderna i matchen.
+    De rör sig på ganska många delar av planen.
+  Läst på lite om CNN
+    Antingen använda för klassifiering av rimliga punkter
+    Hitta 3d-koordinat direkt - vad händer i så fall om vi INTE shufflar bilderna då vi tränar datan, kommer den kanske få tidsinformation då?
+  Jobbat med idéer
+    Avståndsbedömning med hjälp av kameramatris
+  
   
